@@ -44,17 +44,17 @@ angular.module('starter.controllers', [])
 
 .controller('ProfileslistCtrl', function($scope, $state) {
     $scope.profileslist = [
-	{ 
-	    title: 'Dr X', 
-	    id: 1, 
-	    description: 'a', 
+	{
+	    title: 'Dr X',
+	    id: 1,
+	    description: 'a',
 	    pic: 'red-fox2.jpg'
 	},
-	{ 
-	    title: 'Nourse X', 
-	    id: 4, 
-	    description: 'a', 
-	    pic: 'red-fox2.jpg' 
+	{
+	    title: 'Nourse X',
+	    id: 4,
+	    description: 'a',
+	    pic: 'red-fox2.jpg'
 	},
     ];
 
@@ -144,7 +144,8 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ChatCtrl', function($scope, $stateParams) {
-});
+})
+
 .controller('TimelineCtrl', function($scope, $stateParams) {
   $scope.events = [
     {

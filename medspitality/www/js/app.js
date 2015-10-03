@@ -60,7 +60,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
-    url: '/playlists/:playlistId',    views: {
+  .state('app.profile', {
+    url: '/profileslist/:profileId',
+    views: {
       'menuContent': {
         templateUrl: 'templates/profile.html',
         controller: 'ProfileCtrl'
@@ -117,7 +119,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-  
+
   .state('app.chat', {
     url: '/chat/:personId',
     views: {
