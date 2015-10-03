@@ -1,0 +1,12 @@
+<ion-view view-title="Profiles">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="profile in profiles" href="#/app/profiles/{{profile.id}}">
+	<!-- class="item item-avatar" -->
+	<!-- <a href="#/app/profiles/{{profile.id}}" class="thumb"><img ng-src="{{profile.pic}}"></a> -->
+        <img ng-src="{{profile.pic}}">{{profile.title}}<br>
+	{{profile.description}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
