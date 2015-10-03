@@ -42,7 +42,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('ProfileslistCtrl', function($scope) {
+.controller('ProfileslistCtrl', function($scope, $state) {
     $scope.profileslist = [
 	{ 
 	    title: 'Dr X', 
@@ -57,10 +57,20 @@ angular.module('starter.controllers', [])
 	    pic: 'red-fox2.jpg' 
 	},
     ];
+
+    // $state.go('app.profile', {
+    // 	title: title,
+    // 	id: id,
+    // 	pic: pic,
+    // 	description: description
+    // });
     //$scope.orderProp = 'age';
 })
 
 .controller('ProfileCtrl', function($scope, $stateParams) {
+    $scope.title = $stateParams.title;
+    $scope.id = $stateParams.id;
+    $scope.pic = $stateParams.pic;
 })
 
 .controller('PPPProfileCtrl', ['$scope', '$rootParams', function($scope, $rootParams) {
