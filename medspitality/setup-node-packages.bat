@@ -3,7 +3,7 @@
 ::Ionic and cordova? ::cordova@5.1.1
 echo Install ionic (and thus cordova) globally, if not already present
 echo ---------------------------------------------------------------
-call npm list ionic@1.6.4 -g || npm install -g ionic@1.6.4
+call npm list ionic -g || npm install -g ionic
 if %ERRORLEVEL% equ 1 goto :fail
 
 ::Bower?
@@ -13,15 +13,15 @@ call npm list bower -g || npm install -g bower
 if %ERRORLEVEL% equ 1 goto :fail
 
 ::karma-cli?
-echo Install karma-cli globally, if not already present
-echo ---------------------------------------------------------------
-call npm list karma-cli@0.1.0 -g || npm install -g karma-cli@0.1.0
-if %ERRORLEVEL% equ 1 goto :fail
+::echo Install karma-cli globally, if not already present
+::echo ---------------------------------------------------------------
+::call npm list karma-cli@0.1.0 -g || npm install -g karma-cli@0.1.0
+::if %ERRORLEVEL% equ 1 goto :fail
 
 ::gulp?
 echo Install gulp globally, if not already present
 echo ---------------------------------------------------------------
-call npm list gulp@3.9.0 -g || npm install -g gulp@3.9.0
+call npm list gulp -g || npm install -g gulp
 if %ERRORLEVEL% equ 1 goto :fail
 
 ::NPM package dependencies?
