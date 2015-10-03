@@ -1,5 +1,16 @@
 angular.module('starter.controllers', [])
 
+.run(function($ionicPlatform) {
+    $ionicPlatform.ready(function() {
+        if(window.cordova && window.cordova.plugins.Keyboard) {
+            cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+        }
+        if(window.StatusBar) {
+            StatusBar.styleDefault();
+        }
+    });
+})
+
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
 
   // With the new view caching in Ionic, Controllers are only called
@@ -42,7 +53,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('ProfileslistCtrl', function($scope, $state) {
+.controller('ProfileslistCtrl', function($scope) {
     $scope.profileslist = [
 	{
 	    title: 'Dr X',
@@ -57,20 +68,10 @@ angular.module('starter.controllers', [])
 	    pic: 'red-fox2.jpg'
 	},
     ];
-
-    // $state.go('app.profile', {
-    // 	title: title,
-    // 	id: id,
-    // 	pic: pic,
-    // 	description: description
-    // });
     //$scope.orderProp = 'age';
 })
 
 .controller('ProfileCtrl', function($scope, $stateParams) {
-    $scope.title = $stateParams.title;
-    $scope.id = $stateParams.id;
-    $scope.pic = $stateParams.pic;
 })
 
 .controller('PPPProfileCtrl', ['$scope', '$rootParams', function($scope, $rootParams) {
@@ -103,8 +104,8 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('WhoisWhoCtrl', function($scope) {
-    $scope.employees = [
+.controller('WhoisWhoCtrl', function($scope, $rootScope, $ionicPlatform, $cordovaBeacon){
+    $scope.employyes = [
     {
       id: 10,
       image: 'person1.jpg',
@@ -121,6 +122,35 @@ angular.module('starter.controllers', [])
       name: 'Christina Happyfeet'
     }
   ];
+     
+    $scope.beacons = {};
+ 
+    $ionicPlatform.ready(function() {
+ 
+        $cordovaBeacon.requestWhenInUseAuthorization();
+        $cordovaBeacon.createBeaconRegion("estimote", "A4951234-C5B1-4B44-B512-1370F02D74DE")
+ 
+        $rootScope.$on("$cordovaBeacon:didRangeBeaconsInRegion", function(event, pluginResult) {
+            var uniqueBeaconKey;
+            for(var i = 0; i < pluginResult.beacons.length; i++) {                        
+                uniqueBeaconKey = pluginResult.beacons[i].uuid + ":" + pluginResult.beacons[i].major + ":" + pluginResult.beacons[i].minor;
+                
+                $scope.beacons[uniqueBeaconKey] = pluginResult.beacons[i];
+            }
+            $scope.$apply();
+        });
+ 
+        $scope.startSearching = function() {
+             $cordovaBeacon.startRangingBeaconsInRegion(beaconRegion);
+        };
+        
+        $scope.stopSearcing = function() {
+        $cordovaBeacon.stopRangingBeaconsInRegion(beaconRegion);  
+            $scope.beacons.clear;
+        };
+        //$cordovaBeacon.startRangingBeaconsInRegion($cordovaBeacon.createBeaconRegion("estimote", "A4951234-C5B1-4B44-B512-1370F02D74DE"));
+ 
+    });
 })
 
 .controller('SocialCtrl', function($scope) {
