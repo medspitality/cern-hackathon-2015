@@ -61,7 +61,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordovaBeacon'])
   })
 
   .state('app.profile', {
-    url: '/profileslist/:profileId',
+    url: '/profile/:profileId',
     views: {
       'menuContent': {
         templateUrl: 'templates/profile.html',
