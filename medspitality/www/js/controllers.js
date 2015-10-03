@@ -42,28 +42,21 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('ProfileslistCtrl', function($scope, $state) {
+.controller('ProfileslistCtrl', function($scope) {
     $scope.profileslist = [
-	{ 
-	    title: 'Dr X', 
-	    id: 1, 
-	    description: 'a', 
+	{
+	    title: 'Dr X',
+	    id: 1,
+	    description: 'a',
 	    pic: 'red-fox2.jpg'
 	},
-	{ 
-	    title: 'Nourse X', 
-	    id: 4, 
-	    description: 'a', 
-	    pic: 'red-fox2.jpg' 
+	{
+	    title: 'Nourse X',
+	    id: 4,
+	    description: 'a',
+	    pic: 'red-fox2.jpg'
 	},
     ];
-
-    // $state.go('app.profile', {
-    // 	title: title,
-    // 	id: id,
-    // 	pic: pic,
-    // 	description: description
-    // });
     //$scope.orderProp = 'age';
 })
 
@@ -103,8 +96,8 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('WhoisWhoCtrl', function($scope) {
-    $scope.employees = [
+.controller('WhoisWhoCtrl', function($scope, $rootScope, $ionicPlatform, $cordovaBeacon){
+    $scope.employyes = [
     {
       id: 10,
       image: 'person1.jpg',
