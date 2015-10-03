@@ -144,4 +144,12 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ChatCtrl', function($scope, $stateParams) {
+  $scope.personId = $stateParams.personId;
+  $scope.personName = $stateParams.personName;
+  $scope.chats = [
+    "Hello!",
+    "Hallo",
+    "Hello, how are you?",
+    "Hey! Are you down for some Kung-Fu practice?"
+  ];
 });
