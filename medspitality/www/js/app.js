@@ -49,32 +49,21 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-  .state('app.playlists', {
-    url: '/playlists',
+
+  .state('app.profileslist', {
+    url: '/profileslist',
     views: {
       'menuContent': {
-        templateUrl: 'templates/playlists.html',
-        controller: 'PlaylistsCtrl'
+        templateUrl: 'templates/profiles.html',
+        controller: 'ProfileslistCtrl'
       }
     }
   })
 
-  .state('app.timeline', {
-    url: '/timeline',
-    views: {
+    url: '/playlists/:playlistId',    views: {
       'menuContent': {
-        templateUrl: 'templates/timeline.html',
-        controller: 'TimelineCtrl'
-      }
-    }
-  })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+        templateUrl: 'templates/profile.html',
+        controller: 'ProfileCtrl'
       }
     }
   })
@@ -89,6 +78,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+.state('app.timeline', {
+    url: '/timeline',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/timeline.html',
+        controller: 'TimelineCtrl'
+      }
+    }
+  })
+
   .state('app.feedbackdetail', {
     url: '/feedbackdetail/:feedbackId',
     views: {
@@ -97,7 +96,37 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'FeedbackdetailCtrl'
       }
     }
+  })
+
+  .state('app.social', {
+    url: '/social',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/social.html',
+        controller: 'SocialCtrl'
+      }
+    }
+  })
+
+  .state('app.whoiswho', {
+    url: '/whoiswho',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/whoiswho.html',
+        controller: 'WhoisWhoCtrl'
+      }
+    }
+  })
+  
+  .state('app.chat', {
+    url: '/chat/:personId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/chat.html',
+        controller: 'ChatCtrl'
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/app/profileslist');
 });

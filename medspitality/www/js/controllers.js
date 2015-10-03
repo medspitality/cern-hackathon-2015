@@ -41,19 +41,42 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+
+.controller('ProfileslistCtrl', function($scope, $state) {
+    $scope.profileslist = [
+	{ 
+	    title: 'Dr X', 
+	    id: 1, 
+	    description: 'a', 
+	    pic: 'red-fox2.jpg'
+	},
+	{ 
+	    title: 'Nourse X', 
+	    id: 4, 
+	    description: 'a', 
+	    pic: 'red-fox2.jpg' 
+	},
+    ];
+
+    // $state.go('app.profile', {
+    // 	title: title,
+    // 	id: id,
+    // 	pic: pic,
+    // 	description: description
+    // });
+    //$scope.orderProp = 'age';
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('ProfileCtrl', function($scope, $stateParams) {
+    $scope.title = $stateParams.title;
+    $scope.id = $stateParams.id;
+    $scope.pic = $stateParams.pic;
 })
+
+.controller('PPPProfileCtrl', ['$scope', '$rootParams', function($scope, $rootParams) {
+    var pid = $rootParams.profileId;
+    $scope.profile = $scope.profileslist[pid];
+}])
 
 .controller('FeedbacklistCtrl', function($scope) {
   $scope.feedbacks = [
@@ -73,8 +96,55 @@ angular.module('starter.controllers', [])
 })
 
 .controller('FeedbackdetailCtrl', function($scope, $stateParams) {
+  $scope.data = {
+    'comfortable' : '5',
+    'kind' : '5',
+    'helful' : '5'
+  };
 })
 
+.controller('WhoisWhoCtrl', function($scope) {
+    $scope.employees = [
+    {
+      id: 10,
+      image: 'person1.jpg',
+      name: 'Clara Healty'
+    },
+    {
+      id: 20,
+      image: 'person2.jpg',
+      name: 'Mike Headache'
+    },
+    {
+      id: 30,
+      image: 'person3.jpg',
+      name: 'Christina Happyfeet'
+    }
+  ];
+})
+
+.controller('SocialCtrl', function($scope) {
+  $scope.people = [
+    {
+      id: 1,
+      image: 'person1.jpg',
+      name: 'Clara Healty'
+    },
+    {
+      id: 2,
+      image: 'person2.jpg',
+      name: 'Mike Headache'
+    },
+    {
+      id: 3,
+      image: 'person3.jpg',
+      name: 'Christina Happyfeet'
+    }
+  ];
+})
+
+.controller('ChatCtrl', function($scope, $stateParams) {
+});
 .controller('TimelineCtrl', function($scope, $stateParams) {
   $scope.events = [
     {

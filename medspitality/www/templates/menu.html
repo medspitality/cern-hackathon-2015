@@ -14,27 +14,43 @@
 
   <ion-side-menu side="left" expose-aside-when="large">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Medspitality <img src="img/redcross.jpg" alt=" |+| " style="width:20px;height:20px;"></h1>
+    <h1 class="title">
+      Medspitality
+      <img src="img/redcross.jpg" alt=" |+| " style="width:20px;height:20px;">
+    </h1>
     </ion-header-bar>
     <ion-content>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 60px; float: left;">
+          <img src="img/detault_person.gif" alt="" style="width:80px;height:80px;margin:10px;">
+        </div>
+        <div style="margin-left: 100px; margin-top: 15px;">
+          <h4>Paul Patience<h4/>
+        </div>
+      </div>
       <ion-list>
+      <!--
         <ion-item menu-close ng-click="login()">
           Login
         </ion-item>
-        <ion-item menu-close href="#/app/timeline">
+        !-->
+		<ion-item menu-close href="#/app/timeline">
           My Schedule
         </ion-item>
         <ion-item menu-close href="#/app/search">
           Search
         </ion-item>
-        <ion-item menu-close href="#/app/browse">
-          Browse
+        <ion-item menu-close href="#/app/social">
+          Social
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item menu-close href="#/app/profileslist">
+          Profiles
         </ion-item>
         <ion-item menu-close href="#/app/feedbacklist">
           Feedback
+        </ion-item>
+        <ion-item menu-close href="#/app/whoiswho">
+          Who is who
         </ion-item>
       </ion-list>
     </ion-content>
