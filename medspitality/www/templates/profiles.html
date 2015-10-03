@@ -1,9 +1,10 @@
-<ion-view view-title="Meet the hospital team">
+<ion-view view-title="Meet the team">
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="profile in profileslist" href="#/app/profile/{{profile.id}}" class="item item-avatar">
-        <img src="img/{{profile.pic}}">{{profile.title}}<br>
-	{{profile.description}}
+        <img src="img/{{profile.pic}}"/>
+        <h2><b>{{profile.title}}</b></h2>
+	      {{profile.description}}
       </ion-item>
     </ion-list>
   </ion-content>

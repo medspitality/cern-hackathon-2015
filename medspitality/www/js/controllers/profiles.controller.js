@@ -17,7 +17,7 @@ angular.module('starter.controllers')
    {
        title: 'Guillermina Pilla',
        id: 4,
-       description: 'Nourse',
+       description: 'Nurse',
        pic: 'nourse_1.jpg'
    }
   ];

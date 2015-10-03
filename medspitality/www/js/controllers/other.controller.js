@@ -5,7 +5,7 @@ angular.module('starter.controllers')
     {
       id: 10,
       image: 'person1.jpg',
-      name: 'Clara Healty'
+      name: 'Clara Healthy'
     },
     {
       id: 20,
