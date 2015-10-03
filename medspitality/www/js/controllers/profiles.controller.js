@@ -31,6 +31,9 @@ angular.module('starter.controllers')
     $scope.pic = $stateParams.pic;
 })
 
+.controller('PatienceprofileCtrl', function($scope, $stateParams) {
+})
+
 .controller('PPPProfileCtrl', ['$scope', '$rootParams', function($scope, $rootParams) {
     var pid = $rootParams.profileId;
     $scope.profile = $scope.profileslist[pid];
