@@ -1,7 +1,7 @@
 <ion-view view-title="Social">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="person in people" href="#/app/chat/{{person.id}}" class="item item-avatar">
+      <ion-item ng-repeat="person in people" href="#/app/chat/{{person.id}}/{{person.name}}" class="item item-avatar">
         <img src="img/{{person.image}}">
         <h2><b>{{person.name}}</b></h2>
       </ion-item>
