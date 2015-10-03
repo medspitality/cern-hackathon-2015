@@ -93,7 +93,7 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('WhoisWhoCtrl', function($scope, $rootScope, $ionicPlatform, $cordovaBeacon){
+.controller('WhoisWhoCtrl', function($scope, $stateParams){
     $scope.employyes = [
     {
       id: 10,
@@ -141,6 +141,7 @@ angular.module('starter.controllers', [])
     "Hallo",
     "Hello, how are you?",
     "Hey! Are you down for some Kung-Fu practice?"
+  ]
 })
 
 .controller('TimelineCtrl', function($scope, $stateParams) {
@@ -200,6 +201,6 @@ angular.module('starter.controllers', [])
       start: '13:00',
       icon: 'ion-fork',
       fdescription: 'Spinach with scrambled eggs and potatoes'
-    },
+    }
   ];
 });
