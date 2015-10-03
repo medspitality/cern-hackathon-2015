@@ -24,7 +24,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordovaBeacon'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
     .state('app', {
     url: '/app',
     abstract: true,
@@ -81,6 +80,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordovaBeacon'])
     }
   })
 
+.state('app.timeline', {
+    url: '/timeline',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/timeline.html',
+        controller: 'TimelineCtrl'
+      }
+    }
+  })
+
   .state('app.feedbackdetail', {
     url: '/feedbackdetail/:feedbackId',
     views: {
@@ -110,7 +119,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ngCordovaBeacon'])
       }
     }
   })
-  
+
   .state('app.chat', {
     url: '/chat/:personId',
     views: {
