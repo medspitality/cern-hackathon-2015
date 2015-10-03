@@ -55,7 +55,10 @@ angular.module('starter.controllers', [])
     //$scope.orderProp = 'age';
 })
 
-.controller('ProfileCtrl', ['$scope', '$rootParams', function($scope, $rootParams) {
+.controller('ProfileCtrl', function($scope, $stateParams) {
+})
+
+.controller('PPPProfileCtrl', ['$scope', '$rootParams', function($scope, $rootParams) {
     var pid = $rootParams.profileId;
     $scope.profile = $scope.profiles[pid];
 }])
