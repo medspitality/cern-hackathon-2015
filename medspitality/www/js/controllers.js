@@ -43,20 +43,26 @@ angular.module('starter.controllers', [])
 
 
 .controller('ProfileslistCtrl', function($scope) {
-    $scope.profileslist = [
-	{
-	    title: 'Dr X',
-	    id: 1,
-	    description: 'a',
-	    pic: 'red-fox2.jpg'
-	},
-	{
-	    title: 'Nourse X',
-	    id: 4,
-	    description: 'a',
-	    pic: 'red-fox2.jpg'
-	},
-    ];
+  $scope.profileslist = [
+    {
+        title: 'Julia Smith',
+        id: 1,
+        description: 'Surgery specialist',
+        pic: 'doctor_2.jpg'
+    },
+  	{
+  	    title: 'Neil Answers',
+  	    id: 3,
+  	    description: 'Back especialist',
+  	    pic: 'doctor_1.jpg'
+  	},
+  	{
+  	    title: 'Guillermina Pilla',
+  	    id: 4,
+  	    description: 'Nourse',
+  	    pic: 'nourse_1.jpg'
+  	}
+  ];
     //$scope.orderProp = 'age';
 })
 
