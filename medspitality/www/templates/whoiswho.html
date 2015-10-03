@@ -1,0 +1,10 @@
+<ion-view view-title="WhoisWho">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="employee in employees" href="" class="item item-avatar">
+        <img ng-src="/img/{{employee.image}}">
+        <h2><b>{{employee.name}}</b></h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

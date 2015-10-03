@@ -101,6 +101,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('app.whoiswho', {
+    url: '/whoiswho',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/whoiswho.html',
+        controller: 'WhoisWhoCtrl'
+      }
+    }
+  })
+  
   .state('app.chat', {
     url: '/chat/:personId',
     views: {
