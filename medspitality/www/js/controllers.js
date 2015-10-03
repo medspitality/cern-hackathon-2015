@@ -53,4 +53,14 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('FeedbacklistCtrl', function($scope) {
+  $scope.feedbacks = [
+    { title: 'Dr Ms Peralta', id: 1 },
+    { title: 'Clinic', id: 2 }
+  ];
+})
+
+.controller('FeedbackdetailCtrl', function($scope, $stateParams) {
 });

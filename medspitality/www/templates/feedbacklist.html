@@ -1,0 +1,9 @@
+<ion-view view-title="Feedback">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="feedback in feedbacks" href="#/app/feedbackdetail/{{feedback.id}}">
+        {{feedback.title}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
