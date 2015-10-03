@@ -128,6 +128,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'ChatCtrl'
       }
     }
+  })
+
+  .state('app.patienceprofile', {
+    url: '/patienceprofile',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/patienceprofile.html',
+        controller: 'PatienceprofileCtrl'
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/profileslist');
