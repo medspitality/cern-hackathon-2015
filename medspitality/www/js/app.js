@@ -110,9 +110,9 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-  
+
   .state('app.chat', {
-    url: '/chat/:personId',
+    url: '/chat/:personId/:personName',
     views: {
       'menuContent': {
         templateUrl: 'templates/chat.html',
