@@ -2,4 +2,4 @@
 
 :: copy apk files
 echo installing to device
-adb install ./platforms/android/build/outputs/apk/android-debug.apk
+adb install -r ./platforms/android/build/outputs/apk/android-debug.apk
