@@ -73,4 +73,9 @@ angular.module('starter.controllers', [])
 })
 
 .controller('FeedbackdetailCtrl', function($scope, $stateParams) {
+  $scope.data = {
+    'comfortable' : '5',
+    'kind' : '5',
+    'helful' : '5'
+  };
 });
