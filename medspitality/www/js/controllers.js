@@ -61,6 +61,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ProfileCtrl', function($scope, $stateParams) {
+    $scope.id = $stateParams.profileId;
 })
 
 .controller('PPPProfileCtrl', ['$scope', '$rootParams', function($scope, $rootParams) {
