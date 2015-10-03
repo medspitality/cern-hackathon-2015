@@ -42,16 +42,21 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('ProfilesCtrl', function($scope) {
-  $scope.profiles = [
-    { title: 'Dr X', id: 1, description: 'a', pic: '' },
-//    { title: 'Dr Y', id: 2, description: 'a' },
-//    { title: 'Dr Z', id: 3, description: 'a' },
-    { title: 'Nourse X', id: 4, description: 'a', pic: 'red-fox2.jpg' },
-//    { title: 'Nourse Y', id: 5, description: 'a' },
-//    { title: 'Nourse Z', id: 6, description: 'a' }
-  ];
-
+.controller('ProfileslistCtrl', function($scope) {
+    $scope.profileslist = [
+	{ 
+	    title: 'Dr X', 
+	    id: 1, 
+	    description: 'a', 
+	    pic: 'red-fox2.jpg'
+	},
+	{ 
+	    title: 'Nourse X', 
+	    id: 4, 
+	    description: 'a', 
+	    pic: 'red-fox2.jpg' 
+	},
+    ];
     //$scope.orderProp = 'age';
 })
 
@@ -60,7 +65,7 @@ angular.module('starter.controllers', [])
 
 .controller('PPPProfileCtrl', ['$scope', '$rootParams', function($scope, $rootParams) {
     var pid = $rootParams.profileId;
-    $scope.profile = $scope.profiles[pid];
+    $scope.profile = $scope.profileslist[pid];
 }])
 
 .controller('FeedbacklistCtrl', function($scope) {
