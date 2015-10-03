@@ -68,6 +68,26 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         controller: 'FeedbackdetailCtrl'
       }
     }
+  })
+
+  .state('app.social', {
+    url: '/social',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/social.html',
+        controller: 'SocialCtrl'
+      }
+    }
+  })
+
+  .state('app.chat', {
+    url: '/chat/:personId',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/chat.html',
+        controller: 'ChatCtrl'
+      }
+    }
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
