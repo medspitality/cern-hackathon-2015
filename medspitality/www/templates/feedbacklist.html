@@ -2,7 +2,7 @@
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="feedback in feedbacks" href="#/app/feedbackdetail/{{feedback.id}}" class="item item-avatar">
-        <img src="img/{{feedback.image}}">
+        <img ng-src="/img/{{feedback.image}}">
         <h2><b>{{feedback.title}}</b></h2>
         <p>{{feedback.description}}</p>
       </ion-item>
