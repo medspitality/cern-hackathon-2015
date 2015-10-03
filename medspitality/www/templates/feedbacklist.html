@@ -1,8 +1,10 @@
 <ion-view view-title="Feedback">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="feedback in feedbacks" href="#/app/feedbackdetail/{{feedback.id}}">
-        {{feedback.title}}
+      <ion-item ng-repeat="feedback in feedbacks" href="#/app/feedbackdetail/{{feedback.id}}" class="item item-avatar">
+        <img src="img/{{feedback.image}}">
+        <h2><b>{{feedback.title}}</b></h2>
+        <p>{{feedback.description}}</p>
       </ion-item>
     </ion-list>
   </ion-content>
