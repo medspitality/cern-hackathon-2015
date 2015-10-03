@@ -41,19 +41,24 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+
+.controller('ProfilesCtrl', function($scope) {
+  $scope.profiles = [
+    { title: 'Dr X', id: 1, description: 'a', pic: '' },
+//    { title: 'Dr Y', id: 2, description: 'a' },
+//    { title: 'Dr Z', id: 3, description: 'a' },
+    { title: 'Nourse X', id: 4, description: 'a', pic: 'red-fox2.jpg' },
+//    { title: 'Nourse Y', id: 5, description: 'a' },
+//    { title: 'Nourse Z', id: 6, description: 'a' }
   ];
+
+    //$scope.orderProp = 'age';
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-})
+.controller('ProfileCtrl', ['$scope', '$rootParams', function($scope, $rootParams) {
+    var pid = $rootParams.profileId;
+    $scope.profile = $scope.profiles[pid];
+}])
 
 .controller('FeedbacklistCtrl', function($scope) {
   $scope.feedbacks = [
