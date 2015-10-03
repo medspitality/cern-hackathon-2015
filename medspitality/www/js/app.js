@@ -24,7 +24,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-
     .state('app', {
     url: '/app',
     abstract: true,
@@ -56,6 +55,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       'menuContent': {
         templateUrl: 'templates/playlists.html',
         controller: 'PlaylistsCtrl'
+      }
+    }
+  })
+
+  .state('app.timeline', {
+    url: '/timeline',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/timeline.html',
+        controller: 'TimelineCtrl'
       }
     }
   })
