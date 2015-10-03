@@ -4,14 +4,8 @@ angular.module('starter.controllers')
     $scope.profileslist = ProfileFactory.load();
 })
 
-.controller('ProfileslistCtrl', function($scope, $state, ProfileFactory) {
-    $scope.profileslist = ProfileFactory.load();
-})
-
-.controller('ProfileCtrl', function($scope, $stateParams) {
-    $scope.title = $stateParams.title;
-    $scope.id = $stateParams.id;
-    $scope.pic = $stateParams.pic;
+.controller('ProfileCtrl', function($scope, $state, ProfileFactory) {
+    $scope.profile = ProfileFactory.find(1);
 })
 
 .controller('PatienceprofileCtrl', function($scope, $stateParams) {

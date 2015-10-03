@@ -1,9 +1,9 @@
 angular.module('starter.factories', [])
 
 .factory('ProfileFactory', function() {
-    var profilesGroup = {};
+    var profilesAll = [];
 
-    profilesGroup.load = function(){
+    profilesAll.load = function(){
 	return [
 	    {
 		title: 'Julia Smith',
@@ -25,6 +25,11 @@ angular.module('starter.factories', [])
 	    }
 	]};
 
-    return profilesGroup;
+  profilesAll.find = function(id){
+    pf = profilesAll.load();
+    return pf[id];
+  };
+
+    return profilesAll;
 
 });

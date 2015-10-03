@@ -1,14 +1,11 @@
-<ion-view view-title="Profile">
+<ion-view view-title="{{profile.title}}">
   <ion-content>
-    <div class="list card">
-      <div class="item">
-        <h3>{{profile.title}}</h3>
-        <h2>{{profile.id}}</h2>
-        <p>{{single.id}}</p>
-      </div>
-      <div class="item item-body">
-        <p>{{profile.description}}</p>
-      </div>
+    <ion-item  class="profile-picture big-profile-picture">
+      <table><tr>
+      <td><img src="img/{{profile.pic}}"></td>
+      <td><h3>{{profile.title}}</h3></td>
+    </tr></table>
+      </ion-item>
       <div class="item tabs tabs-secondary tabs-icon-left">
         <a class="tab-item">
           <i class="icon ion-thumbsup"></i>
@@ -22,7 +19,6 @@
           <i class="icon ion-share"></i>
           Share
         </a>
-      </div>
     </div>
   </ion-content>
 </ion-view>
