@@ -92,7 +92,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories'])
   })
 
   .state('app.timelinedetail', {
-    url: '/:id',
+    url: '/timelinedetail/:id',
     views: {
       'menuContent': {
         templateUrl: 'templates/timelinedetail.html',
