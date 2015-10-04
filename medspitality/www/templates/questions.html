@@ -1,14 +1,54 @@
 <ion-view view-title="Questions">
   <ion-content>
-
     <div class="card">
       <div class="item item-divider">
-        List your questions:
-      </div>
+        <!--<div ng-controller="AddQCtrl">
+          List your questions:
+          <div class="item item-text-wrap">
+            <form ng-submit="add(newItem); newItem = '';">
+              <input type="text" placeholder="Questions" ng-model="newItem">
+            </form>
+          </div>
+        </div>-->
+        List your Questions:
       <div class="item item-text-wrap">
-        <input type="text" placeholder="Questions">
+      <input type="text" placeholder="Questions">
+</div>
       </div>
-    </div>
+
+<!--
+    <div ng-controller="ListQCtrl">
+      <div class="item item-divider">
+        My questions:
+      </div>
+      <ul>
+        <li ng-repeat="question in list()">{{question}}</li>
+      </ul>
+    </div>-->
+    <ul class="list">
+
+      <li class="item item-checkbox">
+         <label class="checkbox">
+           <input type="checkbox">
+         </label>
+         Can I have more bread tomorrow?
+      </li>
+      <li class="item item-checkbox">
+         <label class="checkbox">
+           <input type="checkbox">
+         </label>
+         How are my blood tests? Don't understand what vitamin B12 is for
+      </li>
+      <li class="item item-checkbox">
+         <label class="checkbox">
+           <input type="checkbox">
+         </label>
+         How does MRI work?
+      </li>
+    </ul>
+
+
+  </div>
   </ion-content>
   <div class="bar bar-footer">
     <button class="button button-assertive" style="width: 100px;">Cancel</button>
