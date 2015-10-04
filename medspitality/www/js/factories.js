@@ -11,7 +11,8 @@ angular.module('starter.factories', [])
         end: '00:00',
         icon: 'ion-medkit',
         description: 'Welcome',
-        fullDescription: ''
+        fullDescription: '',
+        profileId: 0
       },
       {
         id: 1,
@@ -20,7 +21,8 @@ angular.module('starter.factories', [])
         end: '06:10',
         icon: 'ion-woman',
         description: 'Vital signs, morning medication',
-        fullDescription: 'The nurse will take your blood pressure, heart rate and temperature. She will also withdraw some blood to run blood tests.'
+        fullDescription: 'The nurse will take your blood pressure, heart rate and temperature. She will also withdraw some blood to run blood tests.',
+        profileId: 0
       },
       {
         id: 2,
@@ -29,7 +31,8 @@ angular.module('starter.factories', [])
         end: '07:15',
         icon: 'ion-waterdrop',
         description: '2 pieces of whole-grain bread with butter and light cheese',
-        fullDescription: 'It will be time for your shower. A nurse will help you if you need assistance.'
+        fullDescription: 'It will be time for your shower. A nurse will help you if you need assistance.',
+        profileId: 1
       },
       {
         id: 3,
@@ -38,7 +41,8 @@ angular.module('starter.factories', [])
         end: '08:30',
         icon: 'ion-android-restaurant',
         description: '2 pieces of whole-grain bread with butter and light cheese',
-        fullDescription: ''
+        fullDescription: '',
+        profileId: 1
       },
       {
         id: 4,
@@ -47,7 +51,9 @@ angular.module('starter.factories', [])
         end: '09:10',
         icon: 'ion-medkit',
         description: 'Visit of therapist and doctor',
-        fullDescription: 'The medical team will come to see you and discuss your treatment. A specialist will come to see you. After that you will meet with the medical team and your family member(s).'
+        fullDescription: 'The medical team will come to see you and discuss your treatment. A specialist will come to see you. After that you will meet with the medical team and your family member(s).',
+        profileId: 2
+
       },
       {
         id: 5,
@@ -56,7 +62,8 @@ angular.module('starter.factories', [])
         start: '13:00',
         icon: 'ion-fork',
         description: 'Spinach with scrambled eggs and potatoes',
-        fullDescription: ''
+        fullDescription: '',
+        profileId: 2
       },
       {
         id: 6,
@@ -65,7 +72,8 @@ angular.module('starter.factories', [])
         end: '15:00',
         icon: 'ion-camera',
         description: 'MRI',
-        fullDescription: 'You will have an MRI. The procedure takes 20 to 40 minutes, during which you will hear loud noises, which are normal. The procedure is painless.'
+        fullDescription: 'You will have an MRI. The procedure takes 20 to 40 minutes, during which you will hear loud noises, which are normal. The procedure is painless.',
+        profileId: 2
       },
       {
         id: 7,
@@ -74,7 +82,8 @@ angular.module('starter.factories', [])
         end: '15:30',
         icon: ' ion-ios-body',
         description: 'We will help you get out from bed and start walking',
-        fullDescription: ''
+        fullDescription: '',
+        profileId: 2
       },
       {
         id: 8,
@@ -83,7 +92,8 @@ angular.module('starter.factories', [])
         start: '17:00',
         icon: 'ion-person-stalker',
         description: 'Family visit',
-        fullDescription: 'n/a'
+        fullDescription: 'n/a',
+        profileId: 2
       },
       {
         id: 9,
@@ -92,7 +102,8 @@ angular.module('starter.factories', [])
         start: '19:00',
         icon: 'ion-fork',
         description: '2 pieces of whole-grain bread with salami',
-        fullDescription: ''
+        fullDescription: '',
+        profileId: 2
       },
       {
         id: 10,
@@ -100,7 +111,8 @@ angular.module('starter.factories', [])
         end: '20:00',
         start: '21:00',
         icon: 'ion-chatbubbles',
-        description: 'Have chats in the meeting room or watch TV there.'
+        description: 'Have chats in the meeting room or watch TV there.',
+        profileId: 0
       },
       {
         id:11,
@@ -108,7 +120,8 @@ angular.module('starter.factories', [])
         end: '21:00',
         start: '06:00',
         icon: 'ion-ios-moon',
-        description: 'Hava a good sleep'
+        description: 'Hava a good sleep',
+        profileId: 0
       }];
     };
     timeline.find = function(id){
@@ -116,7 +129,6 @@ angular.module('starter.factories', [])
       return tf[id];
     };
     return timeline;
-
   })
 
   .factory('ProfileFactory', function() {

@@ -2,9 +2,10 @@
   <ion-content>
     <div class="list card">
       <div class="item item-avatar">
-        <img src="img/nourse_1.jpg">
+        <a href="#/app/profile/{{profile.id}}"><img src="img/{{profile.pic}}"></img></a>
         <h2>{{timelinedetail.title}}</h2>
         <p>from {{timelinedetail.start}} to {{timelinedetail.end}}</p>
+        <p>with {{profile.title}}</p>
         <p>{{timelinedetail.description}}</p>
       </div>
       <div class="item item-body">
