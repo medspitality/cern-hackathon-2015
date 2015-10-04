@@ -5,17 +5,17 @@ angular.module('starter.controllers')
     {
       id: 1,
       image: 'person1.jpg',
-      name: 'Clara Healty'
+      name: 'CLH_Healthy'
     },
     {
       id: 2,
       image: 'person2.jpg',
-      name: 'Mike Headache'
+      name: 'Mikeheadache'
     },
     {
       id: 3,
       image: 'person3.jpg',
-      name: 'Christina Happyfeet'
+      name: 'Happyfeet_lady'
     }
   ];
 })
@@ -25,7 +25,7 @@ angular.module('starter.controllers')
   $scope.personName = $stateParams.personName;
   $scope.chats = [
     "Hello!",
-    "Hallo",
+    "Hallo. Ich habe eine tolle Zeit hier, aber es ist langweilig.",
     "Hello, how are you?",
     "Hey! Are you down for some Kung-Fu practice?"
   ];

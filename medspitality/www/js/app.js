@@ -6,7 +6,7 @@
 // 'starter.controllers' is found in controllers.js
 // 'starter.factories' is found in factories.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','ngCordovaBeacon'])
-
+//*****fabriph
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -49,7 +49,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','
       }
     }
   })
-
 
   .state('app.profileslist', {
     url: '/profileslist',
@@ -143,6 +142,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','
       'menuContent': {
         templateUrl: 'templates/chat.html',
         controller: 'ChatCtrl'
+      }
+    }
+  })
+
+  .state('app.questions', {
+    url: '/questions',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/questions.html',
+        controller: 'QuestionsCtrl'
+      }
+    }
+  })
+
+  .state('app.home', {
+    url: '/home',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/home.html',
+        controller: 'HomeCtrl'
       }
     }
   })

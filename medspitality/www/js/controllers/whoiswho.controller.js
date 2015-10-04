@@ -12,17 +12,16 @@ angular.module('starter.controllers')
         }
       
     $ionicPlatform.ready(function() {
-        
+
         if(!window.cordova) return;
-        
+
         $cordovaBeacon.requestWhenInUseAuthorization();
         $cordovaBeacon.createBeaconRegion("estimote", "A4951234-C5B1-4B44-B512-1370F02D74DE")
- 
+
         $rootScope.$on("$cordovaBeacon:didRangeBeaconsInRegion", function(event, pluginResult) {
             var uniqueBeaconKey;
+
             for(var i = 0; i < pluginResult.beacons.length; i++) {                        
-               // uniqueBeaconKey = pluginResult.beacons[i].uuid + ":" + pluginResult.beacons[i].major + ":" + pluginResult.beacons[i].minor;
-                //$scope.beacons[uniqueBeaconKey] = pluginResult.beacons[i];
                 var bleMajorID = pluginResult.beacons[i].major;
                 var proximity = 2;
                 switch (pluginResult.beacons[i].proximity) {
@@ -40,8 +39,8 @@ angular.module('starter.controllers')
             }
             $scope.$apply();
         });
- 
+
         $cordovaBeacon.startRangingBeaconsInRegion($cordovaBeacon.createBeaconRegion("estimote", "A4951234-C5B1-4B44-B512-1370F02D74DE"));
- 
+
     });
 });
