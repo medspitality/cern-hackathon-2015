@@ -22,7 +22,7 @@ angular.module('starter.factories', [])
         start: '07:00',
         end: '07:15',
         icon: 'ion-waterdrop',
-        description: '2 pieces of whole-grain bread with butter and light cheese',
+        description: '',
         fullDescription: 'It will be time for your shower. A nurse will help you if you need assistance.',
         profileId: 1
       },
@@ -173,7 +173,7 @@ angular.module('starter.factories', [])
           born: 'October 4, 1985',
           proximity: 2
         }
-      ]
+      ];
     };
 
     profilesAll.find = function(id){
