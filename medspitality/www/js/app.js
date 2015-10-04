@@ -50,7 +50,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','
     }
   })
 
-
   .state('app.profileslist', {
     url: '/profileslist',
     views: {
