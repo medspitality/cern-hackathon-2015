@@ -1,5 +1,5 @@
 angular.module('starter.controllers')
-
+// *****fabriph
 .controller('WhoisWhoCtrl', function($scope, $rootScope, $ionicPlatform, $cordovaBeacon){
     $scope.employyes = [
     {
@@ -33,29 +33,29 @@ angular.module('starter.controllers')
       name: 'Christina Happyfeet'
     }
   ];
-     
+
     $scope.beacons = {};
     $scope.findEmploy = {};
- 
+
     $ionicPlatform.ready(function() {
-        
+
         if(!window.cordova) return;
-        
+
         $cordovaBeacon.requestWhenInUseAuthorization();
         $cordovaBeacon.createBeaconRegion("estimote", "A4951234-C5B1-4B44-B512-1370F02D74DE")
- 
+
         $rootScope.$on("$cordovaBeacon:didRangeBeaconsInRegion", function(event, pluginResult) {
             var uniqueBeaconKey;
-            for(var i = 0; i < pluginResult.beacons.length; i++) {                        
+            for(var i = 0; i < pluginResult.beacons.length; i++) {
                 uniqueBeaconKey = pluginResult.beacons[i].uuid + ":" + pluginResult.beacons[i].major + ":" + pluginResult.beacons[i].minor;
-                
+
                 //$scope.beacons[uniqueBeaconKey] = pluginResult.beacons[i];
         $scope.findEmploy[uniqueBeaconKey] = $scope.employyes[pluginResult.beacons[i].major]
             }
             $scope.$apply();
         });
- 
+
         $cordovaBeacon.startRangingBeaconsInRegion($cordovaBeacon.createBeaconRegion("estimote", "A4951234-C5B1-4B44-B512-1370F02D74DE"));
- 
+
     });
 });
