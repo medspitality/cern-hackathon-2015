@@ -25,3 +25,7 @@ Coaches:
 Drasko Draskovic
 
 Leonardo Milano
+
+
+Special thanks:
+Marco Caronni  <gmcaronni@gmail.com>
