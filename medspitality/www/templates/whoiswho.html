@@ -1,16 +1,10 @@
 <ion-view view-title="WhoisWho">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="(key, value) in beacons" href="" class="item item-avatar">
-<img ng-src="/img/{{employees[value.major].image}}">
-        <h2><b>{{employees[value.major].name}}</b></h2>
+      <ion-item ng-repeat="employee in findEmploy" href="" class="item item-avatar">
+<img ng-src="/img/{{employee.image}}">
+        <h2><b>{{employee.name}}</b></h2>
       </ion-item>
     </ion-list>
   </ion-content>
-  <ion-footer-bar>
-    <div class="button-bar bar-positive" style="position: absolute; bottom: 0px; width: 100%" >
-        <a class="button" ng-click="startSearching()">Start</a>
-        <a class="button" ng-click="stopSearching()">Stop</a>
-    </div>
-  </ion-footer-bar>
 </ion-view>

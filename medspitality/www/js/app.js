@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 // 'starter.factories' is found in factories.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','ngCordovaBeacon'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
