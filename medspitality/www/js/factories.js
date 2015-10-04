@@ -25,7 +25,7 @@ angular.module('starter.factories', [])
       	title: 'Guillermina Pilla',
       	id: 2,
         description: 'Guillermina has two sons that play rugby. She got her diploma in Madrid. She loves classical music.',
-      	job: 'Nourse',
+      	job: 'Nurse',
       	pic: 'nourse_1.jpg',
         proximity: 2
       },
