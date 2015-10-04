@@ -2,9 +2,9 @@
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="profile in profileslist" href="#/app/profile/{{profile.id}}" class="item item-avatar">
-        <img src="img/{{profile.pic}}"/>
+        <img src="img/{{profile.pic}}">
         <h2><b>{{profile.title}}</b></h2>
-	      {{profile.description}}
+	      {{profile.job}}
       </ion-item>
     </ion-list>
   </ion-content>
