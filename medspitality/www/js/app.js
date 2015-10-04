@@ -5,8 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 // 'starter.factories' is found in factories.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories'])
-
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','ngCordovaBeacon'])
+//*****fabriph
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -86,17 +86,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories'])
     views: {
       'menuContent': {
         templateUrl: 'templates/timeline.html',
-        controller: 'TimelineCtrl'
+        //controller: 'TimelineCtrl'
+        controller: 'TimelinefullCtrl'
       }
     }
   })
 
   .state('app.timelinedetail', {
-    url: '/timelinedetail/:id',
+    url: '/timelinedetail/:timelineId',
     views: {
       'menuContent': {
         templateUrl: 'templates/timelinedetail.html',
-        controller: 'TimelinedetailCtrl'
+        //controller: 'TimelinedetailCtrl'
+        controller: 'TimelinesingleCtrl'
       },
       params: {
         event: null,
