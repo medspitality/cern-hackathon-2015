@@ -39,6 +39,8 @@ angular.module('starter.controllers')
  
     $ionicPlatform.ready(function() {
         
+        if(!window.cordova) return;
+        
         $cordovaBeacon.requestWhenInUseAuthorization();
         $cordovaBeacon.createBeaconRegion("estimote", "A4951234-C5B1-4B44-B512-1370F02D74DE")
  
