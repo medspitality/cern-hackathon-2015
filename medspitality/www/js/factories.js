@@ -67,14 +67,15 @@ angular.module('starter.factories', [])
         start: '13:00',
         icon: 'ion-fork',
         fdescription: 'Spinach with scrambled eggs and potatoes'
-      },
-    ];
-  };
+      }
+    ]};
 
 timelineFull.find = function(id){
     tf = timelineFull.load();
   return tf[id];
-}
+};
+
+  return timelineFull;
 
 })
 

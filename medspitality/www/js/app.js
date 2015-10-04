@@ -86,17 +86,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','
     views: {
       'menuContent': {
         templateUrl: 'templates/timeline.html',
-        controller: 'TimelineCtrl'
+        //controller: 'TimelineCtrl'
+        controller: 'TimelinefullCtrl'
       }
     }
   })
 
   .state('app.timelinedetail', {
-    url: '/:id',
+    url: '/timelinedetail/:timelineId',
     views: {
       'menuContent': {
         templateUrl: 'templates/timelinedetail.html',
-        controller: 'TimelinedetailCtrl'
+        //controller: 'TimelinedetailCtrl'
+        controller: 'TimelinesingleCtrl'
       },
       params: {
         event: null,
