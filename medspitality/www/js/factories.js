@@ -7,9 +7,10 @@ angular.module('starter.factories', [])
       {
         id: 0,
         title: 'Enter the hospital',
-        start: '00:00',
-        end: '00:00',
+        start: '05:00',
+        end: '05:00',
         icon: 'ion-cross',
+        showlocation: false,
         description: 'Welcome'
       },
       {
@@ -18,6 +19,7 @@ angular.module('starter.factories', [])
         start: '06:00',
         end: '06:15',
         icon: 'ion-heart',
+        showlocation: false,
         description: 'Get awake, measure bloodpressure'
       },
       {
@@ -26,6 +28,7 @@ angular.module('starter.factories', [])
         start: '08:00',
         end: '09:00',
         icon: 'ion-android-restaurant',
+        showlocation: false,
         description: '2 pieces of whole-grain bread with butter and light cheese'
       },
       {
@@ -34,6 +37,7 @@ angular.module('starter.factories', [])
         start: '09:00',
         end: '09:30',
         icon: 'ion-medkit',
+        showlocation: false,
         description: 'Visit of therapist and doctor'
       },
       {
@@ -42,6 +46,7 @@ angular.module('starter.factories', [])
         start: '10:00',
         end: '10:30',
         icon: 'ion-camera',
+        showlocation: true,
         description: 'We will check on your healing process'
       },
       {
@@ -50,14 +55,16 @@ angular.module('starter.factories', [])
         start: '10:30',
         end: '11:00',
         icon: ' ion-thermometer',
+        showlocation: false,
         description: ''
       },
       {
         id: 6,
         title: 'Visiting hour',
-        end: '11:00',
-        start: '12:00',
+        end: '12:00',
+        start: '11:00',
         icon: 'ion-people',
+        showlocation: false,
         fdescription: 'Family visit'
       },
       {
@@ -66,6 +73,7 @@ angular.module('starter.factories', [])
         end: '12:00',
         start: '13:00',
         icon: 'ion-fork',
+        showlocation: false,
         fdescription: 'Spinach with scrambled eggs and potatoes'
       }
     ]};
