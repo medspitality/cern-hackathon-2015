@@ -1,14 +1,13 @@
 <ion-view view-title="Schedule Timeline">
   <ion-content>
-    <div class="list">
-      <div ng-repeat="event in events track by event.id">
-        <a ng-click="detailsClicked(event)" class="item item-icon-left" href="#">
-          <i class="icon {{event.icon}}"></i>
-          <h2>{{event.title}}</h2>
-          <p>{{event.start}}-{{event.end}}</p>
-          <p>{{event.description}}</p>
+    <ion-list>
+      <ion-item ng-repeat="timelinedetail in timeline" class="item item-icon-left" href="#/app/timelinedetail/{{timelinedetail.id}}">
+          <icon class="icon {{timelinedetail.icon}}"></icon>
+          <h2>{{timelinedetail.title}}</h2>
+          <p>{{timelinedetail.start}}-{{timelinedetail.end}}</p>
+          <p>{{timelinedetail.description}}</p>
         </a>
-      </div>
-    </div>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

@@ -12,6 +12,12 @@ angular.module('starter.controllers')
 .controller('PatienceprofileCtrl', function($scope, $stateParams) {
 })
 
-.controller('PPPProfileCtrl', ['$scope', '$rootParams', function($scope, $rootParams) {
-    $scope.profile = $scope.profileslist[pid];
-}]);
+.controller('TimelinefullCtrl', function($scope, $state, TimelineFactory) {
+    $scope.timeline = TimelineFactory.load();
+})
+
+.controller('TimelinesingleCtrl', function($scope, $state, $stateParams, TimelineFactory) {
+    var pid = $stateParams.timelineId;
+    $scope.timelinedetail = TimelineFactory.find(pid);
+})
+;
