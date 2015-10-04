@@ -1,12 +1,12 @@
 angular.module('starter.controllers')
 
-.controller('TimelineCtrl', function($scope, $state, $stateParams, timelineFactory) {
-  $scope.events = timelineFactory.load();
+.controller('TimelinefullCtrl', function($scope, $state, TimelineFactory) {
+    $scope.timeline = TimelineFactory.load();
+})
 
-  $scope.detailsClicked = function(event, id){
-    $state.go('app.timelinedetail', {
-      event: event,
-      eventId: id
-    });
-  };
-});
+.controller('TimelinesingleCtrl', function($scope, $state, $stateParams, TimelineFactory, ProfileFactory) {
+    var pid = $stateParams.timelineId;
+    $scope.timelinedetail = TimelineFactory.find(pid);
+    $scope.profile = ProfileFactory.find($scope.timelinedetail.profileId);
+})
+;
