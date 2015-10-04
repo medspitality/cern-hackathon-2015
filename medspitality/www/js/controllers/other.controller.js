@@ -45,7 +45,7 @@ angular.module('starter.controllers')
   $scope.personName = $stateParams.personName;
   $scope.chats = [
     "Hello!",
-    "Hallo",
+    "Hallo. Ich habe eine tolle Zeit hier, aber es ist langweilig.",
     "Hello, how are you?",
     "Hey! Are you down for some Kung-Fu practice?"
   ];
