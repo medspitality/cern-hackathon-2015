@@ -45,6 +45,34 @@ angular.module('starter.factories', [])
     return pf[id];
   };
 
-    return profilesAll;
+  return profilesAll;
+})
 
+.factory('FeedbackFactory', function() {
+  var factory = [];
+// TODO(fabriph): careful, id's are used as index of array, not only to index the objet itself.
+  var allData = [
+    {
+      title: 'Dr Ms Peralta',
+      id: 1,
+      image: 'doctor_female_young.jpg',
+      description: 'Pediatric'
+    },
+    {
+      title: 'Barcelona Clinic',
+      id: 2,
+      image: 'logo_barcelona.png',
+      description: 'Villarroel 170, Barcelona, Spain'
+    }
+  ];
+
+  factory.all = function(){
+    return allData;
+  };
+
+  factory.find = function(id){
+    return allData[id];
+  };
+
+  return factory;
 });
