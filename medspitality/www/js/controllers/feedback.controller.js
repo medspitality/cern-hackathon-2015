@@ -13,4 +13,8 @@ angular.module('starter.controllers')
 })
 
 .controller('QuestionsCtrl', function($scope) {
-});
+})
+
+.controller('HomeCtrl', function($scope) {
+})
+;
