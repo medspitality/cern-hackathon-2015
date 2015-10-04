@@ -50,6 +50,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','
     }
   })
 
+
   .state('app.profileslist', {
     url: '/profileslist',
     views: {
@@ -96,7 +97,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','
     views: {
       'menuContent': {
         templateUrl: 'templates/timelinedetail.html',
-        //controller: 'TimelinedetailCtrl'
         controller: 'TimelinesingleCtrl'
       },
       params: {
