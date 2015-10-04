@@ -6,17 +6,6 @@ angular.module('starter.factories', [])
     return [
       {
         id: 0,
-        title: 'Enter the hospital',
-        start: '00:00',
-        end: '00:00',
-        icon: 'ion-medkit',
-        description: 'Welcome',
-        showlocation: false,
-        fullDescription: '',
-        profileId: 0
-      },
-      {
-        id: 1,
         title: 'Nursing round',
         start: '06:00',
         end: '06:10',
@@ -27,7 +16,7 @@ angular.module('starter.factories', [])
         profileId: 0
       },
       {
-        id: 2,
+        id: 1,
         title: 'Washing',
         showlocation: false,
         start: '07:00',
@@ -38,7 +27,7 @@ angular.module('starter.factories', [])
         profileId: 1
       },
       {
-        id: 3,
+        id: 2,
         title: 'Breakfast',
         showlocation: false,
         start: '08:00',
@@ -49,7 +38,7 @@ angular.module('starter.factories', [])
         profileId: 1
       },
       {
-        id: 4,
+        id: 3,
         title: 'Medical round',
         start: '09:00',
         showlocation: false,
@@ -61,10 +50,21 @@ angular.module('starter.factories', [])
 
       },
       {
+        id: 4,
+        title: 'Imaging diagnosis',
+        start: '11:00',
+        showlocation: true,
+        end: '11:30',
+        icon: 'ion-camera',
+        description: 'MRI',
+        fullDescription: 'You will have an MRI. The procedure takes 20 to 40 minutes, during which you will hear loud noises, which are normal. The procedure is painless.',
+        profileId: 2
+      },
+      {
         id: 5,
         title: 'Lunch',
-        end: '12:00',
-        start: '13:00',
+        end: '13:00',
+        start: '12:00',
         showlocation: false,
         icon: 'ion-fork',
         description: 'Spinach with scrambled eggs and potatoes',
@@ -73,17 +73,6 @@ angular.module('starter.factories', [])
       },
       {
         id: 6,
-        title: 'Imaging diagnosis',
-        start: '14:00',
-        showlocation: true,
-        end: '15:00',
-        icon: 'ion-camera',
-        description: 'MRI',
-        fullDescription: 'You will have an MRI. The procedure takes 20 to 40 minutes, during which you will hear loud noises, which are normal. The procedure is painless.',
-        profileId: 2
-      },
-      {
-        id: 7,
         title: 'Physiotherapy',
         start: '15:00',
         showlocation: true,
@@ -94,7 +83,7 @@ angular.module('starter.factories', [])
         profileId: 2
       },
       {
-        id: 8,
+        id: 7,
         title: 'Visiting hour',
         end: '16:00',
         showlocation: false,
@@ -105,7 +94,7 @@ angular.module('starter.factories', [])
         profileId: 2
       },
       {
-        id: 9,
+        id: 8,
         title: 'Dinner & Medication',
         end: '18:30',
         start: '19:00',
@@ -116,7 +105,7 @@ angular.module('starter.factories', [])
         profileId: 2
       },
       {
-        id: 10,
+        id: 9,
         title: 'Entertainment',
         showlocation: false,
         end: '20:00',
@@ -126,7 +115,7 @@ angular.module('starter.factories', [])
         profileId: 0
       },
       {
-        id:11,
+        id:10,
         title: 'Bedtime',
         end: '21:00',
         start: '06:00',
