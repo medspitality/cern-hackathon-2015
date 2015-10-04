@@ -2,11 +2,27 @@
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="timelinedetail in timeline" class="item item-icon-left" href="#/app/timelinedetail/{{timelinedetail.id}}">
-          <icon class="icon {{timelinedetail.icon}}"></icon>
-          <h2>{{timelinedetail.title}}</h2>
-          <p>{{timelinedetail.start}}-{{timelinedetail.end}}</p>
-          <p>{{timelinedetail.description}}</p>
-        </a>
+      <div style="width: 100%; overflow: hidden;">
+        <div style="width: 400px; float: left;">
+          <table>
+            <tr>
+              <td>
+                <icon class="icon {{timelinedetail.icon}}"></icon>
+              </td>
+              <td>
+                <h2>{{timelinedetail.title}}</h2>
+                <p>{{timelinedetail.start}}-{{timelinedetail.end}}</p>
+                <p>{{timelinedetail.description}}</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div style="margin-left: 420px;">
+          <div ng-if="timelinedetail.showlocation">
+            <button class="button button-small button-calm ion-location"> Take me there</button>
+          </div>
+        </div>
+      </div>
       </ion-item>
     </ion-list>
   </ion-content>

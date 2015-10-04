@@ -1,26 +1,54 @@
 <ion-view view-title="{{profile.title}}">
   <ion-content>
-    <div class="list card">
-
-      <div class="item item-avatar">
-        <img src="img/{{profile.pic}}">
-        <h2>{{profile.title}}</h2>
-        <p>{{profile.job}}</p>
+    <div class="card">
+      <div class="item item-divider">
+        Personal information
       </div>
+      <div class="item item-text-wrap">
 
-      <div class="profile-picture big-profile-picture">
-        <img style="width: 128px;" src="img/{{profile.pic}}">
+        <div style="width: 100%; overflow: hidden;">
+          <div style="width: 150px; float: left;">
+            <img style="width: 128px;" src="img/{{profile.pic}}">
+          </div>
+          <div style="margin-left: 160px;">
+            <table>
+              <tr>
+                <td style="width: 160px;"><b>Full name:</b></td>
+                <td>{{profile.title}}</td>
+              </tr>
+              <tr>
+                <td style="width: 160px;"><b>Born:</b></td>
+                <td>{{profile.born}}</td>
+              </tr>
+              <tr>
+                <td style="width: 160px;"><b>Position:</b></td>
+                <td>{{profile.job}}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+
       </div>
+    </div>
+    <div class="card">
+      <div class="item item-divider">
+        Bio
+      </div>
+      <div class="item item-text-wrap">
+        {{profile.description}}
+      </div>
+    </div>
 
-      <p>{{profile.description}}</p>
+    <div>
       <div class="item tabs tabs-secondary tabs-icon-left">
-        <a class="tab-item">
-          <i class="icon ion-thumbsup"></i>
-          Like
+        <a class="tab-item" href="#app/questions">
+          <i class="icon ion-help"></i>
+          Questions
         </a>
-        <a class="tab-item">
-          <i class="icon ion-chatbox"></i>
-          Comment
+        <a class="tab-item" href="#app/feedbackdetail/1">
+          <i class="icon ion-happy-outline"></i>
+          Feedback
         </a>
         <a class="tab-item">
           <i class="icon ion-share"></i>

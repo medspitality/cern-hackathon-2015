@@ -11,6 +11,7 @@ angular.module('starter.factories', [])
         end: '00:00',
         icon: 'ion-medkit',
         description: 'Welcome',
+        showlocation: false,
         fullDescription: '',
         profileId: 0
       },
@@ -19,6 +20,7 @@ angular.module('starter.factories', [])
         title: 'Nursing round',
         start: '06:00',
         end: '06:10',
+        showlocation: false,
         icon: 'ion-woman',
         description: 'Vital signs, morning medication',
         fullDescription: 'The nurse will take your blood pressure, heart rate and temperature. She will also withdraw some blood to run blood tests.',
@@ -27,6 +29,7 @@ angular.module('starter.factories', [])
       {
         id: 2,
         title: 'Washing',
+        showlocation: false,
         start: '07:00',
         end: '07:15',
         icon: 'ion-waterdrop',
@@ -37,6 +40,7 @@ angular.module('starter.factories', [])
       {
         id: 3,
         title: 'Breakfast',
+        showlocation: false,
         start: '08:00',
         end: '08:30',
         icon: 'ion-android-restaurant',
@@ -48,6 +52,7 @@ angular.module('starter.factories', [])
         id: 4,
         title: 'Medical round',
         start: '09:00',
+        showlocation: false,
         end: '09:10',
         icon: 'ion-medkit',
         description: 'Visit of therapist and doctor',
@@ -60,6 +65,7 @@ angular.module('starter.factories', [])
         title: 'Lunch',
         end: '12:00',
         start: '13:00',
+        showlocation: false,
         icon: 'ion-fork',
         description: 'Spinach with scrambled eggs and potatoes',
         fullDescription: '',
@@ -69,6 +75,7 @@ angular.module('starter.factories', [])
         id: 6,
         title: 'Imaging diagnosis',
         start: '14:00',
+        showlocation: true,
         end: '15:00',
         icon: 'ion-camera',
         description: 'MRI',
@@ -79,6 +86,7 @@ angular.module('starter.factories', [])
         id: 7,
         title: 'Physiotherapy',
         start: '15:00',
+        showlocation: true,
         end: '15:30',
         icon: ' ion-ios-body',
         description: 'We will help you get out from bed and start walking',
@@ -89,6 +97,7 @@ angular.module('starter.factories', [])
         id: 8,
         title: 'Visiting hour',
         end: '16:00',
+        showlocation: false,
         start: '17:00',
         icon: 'ion-person-stalker',
         description: 'Family visit',
@@ -100,6 +109,7 @@ angular.module('starter.factories', [])
         title: 'Dinner & Medication',
         end: '18:30',
         start: '19:00',
+        showlocation: false,
         icon: 'ion-fork',
         description: '2 pieces of whole-grain bread with salami',
         fullDescription: '',
@@ -108,6 +118,7 @@ angular.module('starter.factories', [])
       {
         id: 10,
         title: 'Entertainment',
+        showlocation: false,
         end: '20:00',
         start: '21:00',
         icon: 'ion-chatbubbles',
@@ -119,6 +130,7 @@ angular.module('starter.factories', [])
         title: 'Bedtime',
         end: '21:00',
         start: '06:00',
+        showlocation: false,
         icon: 'ion-ios-moon',
         description: 'Hava a good sleep',
         profileId: 0
@@ -142,6 +154,7 @@ angular.module('starter.factories', [])
           job: 'Surgery specialist',
           description: 'Julia loves cats and grounge music. She studied in London and already operated more than 200 patients.',
           pic: 'doctor_2.jpg',
+          born: 'June 11, 1987',
           proximity: 2
         },
         {
@@ -150,6 +163,7 @@ angular.module('starter.factories', [])
           description: 'Neil is a doctor since 1987 when he graduated in Rome. He loves horse riding.',
           job: 'Back especialist',
           pic: 'doctor_1.jpg',
+          born: 'January 21, 1957',
           proximity: 2
         },
         {
@@ -158,6 +172,7 @@ angular.module('starter.factories', [])
           description: 'Guillermina has two sons that play rugby. She got her diploma in Madrid. She loves classical music.',
           job: 'Nurse',
           pic: 'nourse_1.jpg',
+          born: 'September 29, 1954',
           proximity: 2
         },
         {
@@ -166,9 +181,10 @@ angular.module('starter.factories', [])
           description: 'A lovely person who will take care of your kids.',
           job: 'Pediatric',
           pic: 'doctor_female_young.jpg',
+          born: 'October 4, 1985',
           proximity: 2
         }
-      ];
+      ]
     };
 
     profilesAll.find = function(id){
