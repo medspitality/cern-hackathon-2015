@@ -1,16 +1,18 @@
 <ion-view view-title="{{profile.title}}">
   <ion-content>
-    <!--<div class="bar bar-header bar-royal">-->
-      <h1 class="title">{{profile.title}}</h1>
-    <!--</div>-->
-    <!--<div class="bar bar-subheader bar-positive">-->
-      <h2 class="title">{{profile.job}}</h2>
-    <!--</div>-->
-    <div>
-    <ion-item  class="profile-picture big-profile-picture">
-      <img style="width: 128px;" src="img/{{profile.pic}}">
-      </ion-item>
-      <h3>{{profile.description}}</h3>
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="img/{{profile.pic}}">
+        <h2>{{profile.title}}</h2>
+        <p>{{profile.job}}</p>
+      </div>
+
+      <div class="profile-picture big-profile-picture">
+        <img style="width: 128px;" src="img/{{profile.pic}}">
+      </div>
+
+      <p>{{profile.description}}</p>
       <div class="item tabs tabs-secondary tabs-icon-left">
         <a class="tab-item">
           <i class="icon ion-thumbsup"></i>
@@ -25,6 +27,8 @@
           Share
         </a>
       </div>
+
     </div>
+
   </ion-content>
 </ion-view>
