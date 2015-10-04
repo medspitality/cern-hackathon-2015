@@ -176,5 +176,5 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/profileslist');
+  $urlRouterProvider.otherwise('/app/timeline');
 });
