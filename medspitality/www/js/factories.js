@@ -10,21 +10,24 @@ angular.module('starter.factories', [])
 		id: 0,
     job: 'Surgery specialist',
 		description: 'Julia loves cats and grounge music. She studied in London and already operated more than 200 patients.',
-		pic: 'doctor_2.jpg'
+		pic: 'doctor_2.jpg',
+    proximity: 2
 	    },
 	    {
 		title: 'Neil Answers',
 		id: 1,
     description: 'Neil is a doctor since 1987 when he graduated in Rome. He loves horse riding.',
 		job: 'Back especialist',
-		pic: 'doctor_1.jpg'
+		pic: 'doctor_1.jpg',
+    proximity: 2
 	    },
 	    {
 		title: 'Guillermina Pilla',
 		id: 2,
     description: 'Guillermina has two sons that play rugby. She got her diploma in Madrid. She loves classical music.',
 		job: 'Nourse',
-		pic: 'nourse_1.jpg'
+		pic: 'nourse_1.jpg',
+    proximity: 2
 	    }
 	]};
 
