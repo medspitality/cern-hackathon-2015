@@ -145,6 +145,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories'])
     }
   })
 
+  .state('app.questions', {
+    url: '/questions',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/questions.html',
+        controller: 'QuestionsCtrl'
+      }
+    }
+  })
+
   .state('app.patienceprofile', {
     url: '/patienceprofile',
     views: {

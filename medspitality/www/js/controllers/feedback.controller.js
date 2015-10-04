@@ -10,4 +10,7 @@ angular.module('starter.controllers')
     'kind' : '5',
     'helful' : '5'
   };
+})
+
+.controller('QuestionsCtrl', function($scope) {
 });
