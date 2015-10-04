@@ -25,7 +25,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
-    .state('app', {
+  .state('app', {
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
@@ -42,13 +42,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','
   })
 
   .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
+    url: '/browse',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/browse.html'
       }
-    })
+    }
+  })
 
 
   .state('app.profileslist', {
@@ -81,12 +81,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.factories','
     }
   })
 
-.state('app.timeline', {
+  .state('app.timeline', {
     url: '/timeline',
     views: {
       'menuContent': {
         templateUrl: 'templates/timeline.html',
         controller: 'TimelineCtrl'
+      }
+    }
+  })
+
+  .state('app.timelinedetail', {
+    url: '/:id',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/timelinedetail.html',
+        controller: 'TimelinedetailCtrl'
+      },
+      params: {
+        event: null,
+        eventId: null
       }
     }
   })
