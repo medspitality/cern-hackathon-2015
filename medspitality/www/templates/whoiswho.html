@@ -1,9 +1,16 @@
 <ion-view view-title="WhoisWho">
   <ion-content>
     <ion-list>
-      <ion-item ng-repeat="employee in findEmploy" href="" class="item item-avatar">
-<img ng-src="/img/{{employee.image}}">
-        <h2><b>{{employee.name}}</b></h2>
+      <ion-item ng-repeat="employee in mycareteam | orderBy:'proximity'"  ng-switch="employee.proximity" href="#/app/profile/{{employee.id}}" class="item item-avatar item-icon-right item-button-right">
+            <img src="img/{{employee.pic}}">
+            <h2><b>{{employee.title}}</b></h2>
+            {{employee.job}}
+            <div class="icon icon-right" style="color:#4AB7DE;padding-right:50px" ng-switch-when="0">Near</div>   
+            <div class="icon icon-right" style="color:#4AB7DE;padding-right:50px" ng-switch-when="1">Around</div>                        
+
+            <i class="icon icon-right ion-location" style="color:#4AB7DE" ng-switch-when="0"></i>            
+            <i class="icon icon-right ion-location" style="color:#84BC9C" ng-switch-when="1"></i>
+            <i class="icon icon-right ion-location" style="color:grey" ng-switch-when="2"></i>
       </ion-item>
     </ion-list>
   </ion-content>

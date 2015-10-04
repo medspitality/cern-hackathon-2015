@@ -1,42 +1,16 @@
 angular.module('starter.controllers')
 
-.controller('WhoisWhoCtrl', function($scope, $rootScope, $ionicPlatform, $cordovaBeacon){
-    $scope.employyes = [
-    {
-      id: 10,
-      image: 'person1.jpg',
-      name: 'Clara Healty'
-    },
-    {
-      id: 20,
-      image: 'person2.jpg',
-      name: 'Mike Headache'
-    },
-    {
-      id: 30,
-      image: 'person3.jpg',
-      name: 'Mike Headache'
-    },
-    {
-      id: 40,
-      image: 'person2.jpg',
-      name: 'Leonardo Milano'
-    },
-    {
-      id: 50,
-      image: 'person1.jpg',
-      name: 'Davide Alocci'
-    },
-    {
-      id: 60,
-      image: 'person3.jpg',
-      name: 'Christina Happyfeet'
-    }
-  ];
-     
-    $scope.beacons = {};
-    $scope.findEmploy = {};
- 
+.controller('WhoisWhoCtrl', function($scope, $rootScope, $ionicPlatform, $cordovaBeacon,ProfileFactory){
+
+    
+    var profileslist = ProfileFactory.load();
+    $scope.mycareteam = [];
+    
+    for(var counter = 0; counter < profileslist.length; counter++) { 
+            var profile = profileslist[counter]; 
+            $scope.mycareteam[profile.id] = profile;
+        }
+      
     $ionicPlatform.ready(function() {
         
         if(!window.cordova) return;
@@ -47,10 +21,22 @@ angular.module('starter.controllers')
         $rootScope.$on("$cordovaBeacon:didRangeBeaconsInRegion", function(event, pluginResult) {
             var uniqueBeaconKey;
             for(var i = 0; i < pluginResult.beacons.length; i++) {                        
-                uniqueBeaconKey = pluginResult.beacons[i].uuid + ":" + pluginResult.beacons[i].major + ":" + pluginResult.beacons[i].minor;
-                
+               // uniqueBeaconKey = pluginResult.beacons[i].uuid + ":" + pluginResult.beacons[i].major + ":" + pluginResult.beacons[i].minor;
                 //$scope.beacons[uniqueBeaconKey] = pluginResult.beacons[i];
-        $scope.findEmploy[uniqueBeaconKey] = $scope.employyes[pluginResult.beacons[i].major]
+                var bleMajorID = pluginResult.beacons[i].major;
+                var proximity = 2;
+                switch (pluginResult.beacons[i].proximity) {
+                        case "ProximityImmediate":
+                            proximity = 0
+                            break;
+                        case "ProximityNear":
+                            proximity = 1
+                            break;
+                        case "ProximityFar":
+                            proximity = 2
+                            break; 
+                }
+                $scope.mycareteam[bleMajorID].proximity = proximity;
             }
             $scope.$apply();
         });
