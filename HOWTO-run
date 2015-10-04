@@ -1,3 +1,9 @@
 If you want to run the app, in a web version:
   ionic serve
 
+Before run:
+
+- Enter in the folder of the app (cd medspitality)
+- enter : cordova plugin add https://github.com/petermetz/cordova-plugin-ibeacon.git
+- enter : cordova -d platform add android
+
